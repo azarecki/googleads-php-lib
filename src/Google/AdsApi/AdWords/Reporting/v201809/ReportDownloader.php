@@ -197,7 +197,7 @@ final class ReportDownloader
      */
     private function makeReportRequest(array $requestOptions)
     {
-        $requestOptions[RequestOptions::STREAM] = true;
+        $requestOptions[RequestOptions::STREAM] = false;
         $proxy = $this->session->getConnectionSettings()->getProxyUrl();
         if (!empty($proxy)) {
             $requestOptions[RequestOptions::PROXY] = ['https' => $proxy];
